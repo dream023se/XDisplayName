@@ -41,8 +41,8 @@ function FullNameForm() {
         />
       </div>
       <button type="submit">Submit</button>
-      {error && <p style={{ color: 'red' }}>{error}</p>}
-      {fullName && <p>{fullName}</p>}
+      {/* {error && <p style={{ color: 'red' }}>{error}</p>} */}
+    <div>{fullName}</div>
     </form>
   );
 }

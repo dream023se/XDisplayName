@@ -20,6 +20,7 @@ function FullNameForm() {
   };
 
   return (
+    <>
     <form onSubmit={handleSubmit}>
       <div>
         <h1>Full Name Display</h1>
@@ -42,8 +43,10 @@ function FullNameForm() {
       </div>
       <button type="submit">Submit</button>
       {/* {error && <p style={{ color: 'red' }}>{error}</p>} */}
-    <div>{fullName}</div>
+    
     </form>
+    <div>{fullName}</div>
+    </>
   );
 }
 

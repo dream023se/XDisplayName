@@ -15,7 +15,7 @@ function FullNameForm() {
     //   setFullName('');
     //   setError('Please fill in both first and last names.');
     // }
-    setFullName(`${firstName} ${lastName}`);
+    setFullName(`Full Name: ${firstName} ${lastName}`);
     
   };
 
@@ -42,7 +42,7 @@ function FullNameForm() {
       </div>
       <button type="submit">Submit</button>
       {error && <p style={{ color: 'red' }}>{error}</p>}
-      {fullName && <p>Full Name: {fullName}</p>}
+      {fullName && <p>{fullName}</p>}
     </form>
   );
 }

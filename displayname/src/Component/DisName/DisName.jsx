@@ -4,7 +4,7 @@ function FullNameForm() {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [fullName, setFullName] = useState('');
-  const [error, setError] = useState('');
+  const [showName, setShowName] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -15,6 +15,7 @@ function FullNameForm() {
     //   setFullName('');
     //   setError('Please fill in both first and last names.');
     // }
+    setShowName(true)
     setFullName(`Full Name: ${firstName} ${lastName}`);
     
   };
@@ -45,7 +46,8 @@ function FullNameForm() {
       {/* {error && <p style={{ color: 'red' }}>{error}</p>} */}
     
     </form>
-    <div>{fullName}</div>
+    {showName ? ( <div>{fullName}</div>) : (null)}
+   
     </>
   );
 }

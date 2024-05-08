@@ -8,13 +8,15 @@ function FullNameForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (firstName.trim() && lastName.trim()) {
-      setFullName(`${firstName.trim()} ${lastName.trim()}`);
-      setError('');
-    } else {
-      setFullName('');
-      setError('Please fill in both first and last names.');
-    }
+    // if (firstName.trim() && lastName.trim()) {
+    //   setFullName(`${firstName.trim()} ${lastName.trim()}`);
+    //   setError('');
+    // } else {
+    //   setFullName('');
+    //   setError('Please fill in both first and last names.');
+    // }
+    setFullName(`${firstName} ${lastName}`);
+    
   };
 
   return (
@@ -22,7 +24,7 @@ function FullNameForm() {
       <div>
         <h1>Full Name Display</h1>
         <label htmlFor="firstName">First Name:</label>
-        <input
+        <input required
           type="text"
           id="firstName"
           value={firstName}
@@ -31,7 +33,7 @@ function FullNameForm() {
       </div>
       <div>
         <label htmlFor="lastName">Last Name:</label>
-        <input
+        <input required
           type="text"
           id="lastName"
           value={lastName}
